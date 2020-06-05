@@ -27,23 +27,23 @@ class UnvlogIt
   def initialize(url=nil, options={})
     @object = VideoFactory.new(url, options).load_service
   end
-  
+
   def title
     @object.title rescue nil
   end
-  
+
   def thumbnail
     @object.thumbnail rescue nil
   end
-  
+
   def duration # duration is in seconds
     @object.duration rescue nil
   end
-  
+
   def embed_url
     @object.embed_url rescue nil
   end
-  
+
   def video_id
     @object.video_id rescue nil
   end
@@ -63,7 +63,7 @@ class UnvlogIt
   # Deprecated
   def download_url
   end
-  
+
   def video_details(width=425, height=344)
     {
       :title => @object.title,
